@@ -46,7 +46,7 @@ randombytes_init_if_needed(void)
 {
     if (implementation == NULL) {
         implementation = RANDOMBYTES_DEFAULT_IMPLEMENTATION;
-        randombytes_stir();
+        //randombytes_stir();
     }
 }
 
@@ -72,6 +72,7 @@ randombytes_implementation_name(void)
 uint32_t
 randombytes_random(void)
 {
+    /*
 #ifndef __EMSCRIPTEN__
     randombytes_init_if_needed();
     return implementation->random();
@@ -80,11 +81,14 @@ randombytes_random(void)
         return Module.getRandomValue();
     });
 #endif
+*/
+    return 0;
 }
 
 void
 randombytes_stir(void)
 {
+    /*
 #ifndef __EMSCRIPTEN__
     randombytes_init_if_needed();
     if (implementation->stir != NULL) {
@@ -119,11 +123,13 @@ randombytes_stir(void)
         }
     });
 #endif
+*/
 }
 
 uint32_t
 randombytes_uniform(const uint32_t upper_bound)
 {
+#if false
     uint32_t min;
     uint32_t r;
 
@@ -144,11 +150,14 @@ randombytes_uniform(const uint32_t upper_bound)
      * the worst case (2**31+1) requires ~ 2 attempts */
 
     return r % upper_bound;
+#endif
+        return 0;
 }
 
 void
 randombytes_buf(void * const buf, const size_t size)
 {
+    /*
 #ifndef __EMSCRIPTEN__
     randombytes_init_if_needed();
     if (size > (size_t) 0U) {
@@ -162,12 +171,14 @@ randombytes_buf(void * const buf, const size_t size)
         p[i] = (unsigned char) randombytes_random();
     }
 #endif
+*/
 }
 
 void
 randombytes_buf_deterministic(void * const buf, const size_t size,
                               const unsigned char seed[randombytes_SEEDBYTES])
 {
+    /*
     static const unsigned char nonce[crypto_stream_chacha20_ietf_NONCEBYTES] = {
         'L', 'i', 'b', 's', 'o', 'd', 'i', 'u', 'm', 'D', 'R', 'G'
     };
@@ -181,6 +192,7 @@ randombytes_buf_deterministic(void * const buf, const size_t size,
 #endif
     crypto_stream_chacha20_ietf((unsigned char *) buf, (unsigned long long) size,
                                 nonce, seed);
+    */
 }
 
 size_t
@@ -192,9 +204,11 @@ randombytes_seedbytes(void)
 int
 randombytes_close(void)
 {
+    /*
     if (implementation != NULL && implementation->close != NULL) {
         return implementation->close();
     }
+    */
     return 0;
 }
 
