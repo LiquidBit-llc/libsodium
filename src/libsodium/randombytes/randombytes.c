@@ -72,7 +72,7 @@ randombytes_implementation_name(void)
 uint32_t
 randombytes_random(void)
 {
-    /*
+#ifndef NINTENDO_SWITCH
 #ifndef __EMSCRIPTEN__
     randombytes_init_if_needed();
     return implementation->random();
@@ -82,13 +82,15 @@ randombytes_random(void)
     });
 #endif
 */
+#endif
     return 0;
 }
 
 void
 randombytes_stir(void)
 {
-    /*
+#ifndef NINTENDO_SWITCH
+
 #ifndef __EMSCRIPTEN__
     randombytes_init_if_needed();
     if (implementation->stir != NULL) {
@@ -123,7 +125,7 @@ randombytes_stir(void)
         }
     });
 #endif
-*/
+#endif
 }
 
 uint32_t
@@ -157,7 +159,7 @@ randombytes_uniform(const uint32_t upper_bound)
 void
 randombytes_buf(void * const buf, const size_t size)
 {
-    /*
+#ifndef NINTENDO_SWITCH
 #ifndef __EMSCRIPTEN__
     randombytes_init_if_needed();
     if (size > (size_t) 0U) {
@@ -171,14 +173,14 @@ randombytes_buf(void * const buf, const size_t size)
         p[i] = (unsigned char) randombytes_random();
     }
 #endif
-*/
+#endif
 }
 
 void
 randombytes_buf_deterministic(void * const buf, const size_t size,
                               const unsigned char seed[randombytes_SEEDBYTES])
 {
-    /*
+#ifndef NINTENDO_SWITCH
     static const unsigned char nonce[crypto_stream_chacha20_ietf_NONCEBYTES] = {
         'L', 'i', 'b', 's', 'o', 'd', 'i', 'u', 'm', 'D', 'R', 'G'
     };
@@ -192,7 +194,7 @@ randombytes_buf_deterministic(void * const buf, const size_t size,
 #endif
     crypto_stream_chacha20_ietf((unsigned char *) buf, (unsigned long long) size,
                                 nonce, seed);
-    */
+#endif
 }
 
 size_t
@@ -204,11 +206,11 @@ randombytes_seedbytes(void)
 int
 randombytes_close(void)
 {
-    /*
+#ifndef NINTENDO_SWITCH
     if (implementation != NULL && implementation->close != NULL) {
         return implementation->close();
     }
-    */
+#endif
     return 0;
 }
 
