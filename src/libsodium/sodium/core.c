@@ -16,6 +16,7 @@
 #include "crypto_stream_chacha20.h"
 #include "crypto_stream_salsa20.h"
 #include "randombytes.h"
+#include "randombytes_switch.h"
 #include "runtime.h"
 #include "utils.h"
 #include "private/implementations.h"
@@ -52,6 +53,11 @@ sodium_init(void)
         return 1;
     }
     _sodium_runtime_get_cpu_features();
+
+#ifdef NINTENDO_SWITCH
+    randombytes_set_implementation(&randombytes_switch_implementation);
+#endif
+
     randombytes_stir();
     _sodium_alloc_init();
     _crypto_pwhash_argon2_pick_best_implementation();
