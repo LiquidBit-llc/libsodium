@@ -73,6 +73,7 @@ uint32_t
 randombytes_random(void)
 {
 #ifndef NINTENDO_SWITCH
+
 #ifndef __EMSCRIPTEN__
     randombytes_init_if_needed();
     return implementation->random();
@@ -81,9 +82,10 @@ randombytes_random(void)
         return Module.getRandomValue();
     });
 #endif
-*/
-#endif
+
+#else
     return 0;
+#endif
 }
 
 void
