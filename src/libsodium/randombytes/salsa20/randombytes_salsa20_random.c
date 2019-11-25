@@ -39,14 +39,18 @@
 #include "utils.h"
 
 #ifdef _WIN32
-# include <windows.h>
 # include <sys/timeb.h>
+#ifdef XBOXONE
+# include <Windows.h>
+#else
+# include <windows.h>
 # define RtlGenRandom SystemFunction036
 # if defined(__cplusplus)
 extern "C"
 # endif
 BOOLEAN NTAPI RtlGenRandom(PVOID RandomBuffer, ULONG RandomBufferLength);
 # pragma comment(lib, "advapi32.lib")
+#endif
 # ifdef __BORLANDC__
 #  define _ftime ftime
 #  define _timeb timeb
@@ -339,6 +343,7 @@ randombytes_salsa20_random_stir(void)
     global.pid = getpid();
 #endif
 
+#ifndef XBOXONE
 #ifndef _WIN32
 
 # ifdef HAVE_SAFE_ARC4RANDOM
@@ -366,7 +371,7 @@ randombytes_salsa20_random_stir(void)
         sodium_misuse(); /* LCOV_EXCL_LINE */
     }
 #endif
-
+#endif
     stream.initialized = 1;
 }
 

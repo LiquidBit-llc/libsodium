@@ -46,6 +46,9 @@
  * based on Chromium) also depend on it, and that libsodium allows the RNG to be
  * replaced without patching nor recompiling the library.
  */
+#ifdef XBOXONE
+# include <Windows.h>
+#else
 # include <windows.h>
 # define RtlGenRandom SystemFunction036
 # if defined(__cplusplus)
@@ -53,6 +56,7 @@ extern "C"
 # endif
 BOOLEAN NTAPI RtlGenRandom(PVOID RandomBuffer, ULONG RandomBufferLength);
 # pragma comment(lib, "advapi32.lib")
+#endif
 #endif
 
 #if defined(__OpenBSD__) || defined(__CloudABI__)
@@ -330,6 +334,7 @@ randombytes_sysrandom_buf(void * const buf, const size_t size)
     assert(size <= ULONG_LONG_MAX);
 # endif
 #endif
+#ifndef XBOXONE
 #ifndef _WIN32
 # if defined(SYS_getrandom) && defined(__NR_getrandom)
     if (stream.getrandom_available != 0) {
@@ -343,6 +348,7 @@ randombytes_sysrandom_buf(void * const buf, const size_t size)
         safe_read(stream.random_data_source_fd, buf, size) != (ssize_t) size) {
         sodium_misuse(); /* LCOV_EXCL_LINE */
     }
+
 #else
     COMPILER_ASSERT(randombytes_BYTES_MAX <= 0xffffffffUL);
     if (size > (size_t) 0xffffffffUL) {
@@ -351,6 +357,7 @@ randombytes_sysrandom_buf(void * const buf, const size_t size)
     if (! RtlGenRandom((PVOID) buf, (ULONG) size)) {
         sodium_misuse(); /* LCOV_EXCL_LINE */
     }
+#endif
 #endif
 }
 

@@ -4,7 +4,11 @@
 #include <string.h>
 #include <time.h>
 #ifdef _WIN32
+#ifdef XBOXONE
+# include <Windows.h>
+#else
 # include <windows.h>
+#endif
 #elif defined(HAVE_PTHREAD)
 # include <pthread.h>
 #endif

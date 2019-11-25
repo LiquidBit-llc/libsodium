@@ -15,7 +15,11 @@
 #endif
 
 #ifdef _WIN32
+#ifdef XBOXONE
+# include <Windows.h>
+#else
 # include <windows.h>
+#endif
 # include <wincrypt.h>
 #else
 # include <unistd.h>
