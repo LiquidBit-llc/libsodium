@@ -9,18 +9,22 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Durango = Debug|Durango
 		Debug|NX64 = Debug|NX64
+		Debug|ORBIS = Debug|ORBIS
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
 		DebugDLL|Durango = DebugDLL|Durango
 		DebugDLL|NX64 = DebugDLL|NX64
+		DebugDLL|ORBIS = DebugDLL|ORBIS
 		DebugDLL|Win32 = DebugDLL|Win32
 		DebugDLL|x64 = DebugDLL|x64
 		Release|Durango = Release|Durango
 		Release|NX64 = Release|NX64
+		Release|ORBIS = Release|ORBIS
 		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
 		ReleaseDLL|Durango = ReleaseDLL|Durango
 		ReleaseDLL|NX64 = ReleaseDLL|NX64
+		ReleaseDLL|ORBIS = ReleaseDLL|ORBIS
 		ReleaseDLL|Win32 = ReleaseDLL|Win32
 		ReleaseDLL|x64 = ReleaseDLL|x64
 	EndGlobalSection
@@ -29,6 +33,8 @@ Global
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|Durango.Build.0 = Debug|Durango
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|NX64.ActiveCfg = Debug|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|NX64.Build.0 = Debug|NX64
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|ORBIS.ActiveCfg = Debug|ORBIS
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|ORBIS.Build.0 = Debug|ORBIS
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|Win32.ActiveCfg = Debug|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|Win32.Build.0 = Debug|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|x64.ActiveCfg = Debug|x64
@@ -36,6 +42,8 @@ Global
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|Durango.ActiveCfg = DebugDLL|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|NX64.ActiveCfg = DebugDLL|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|NX64.Build.0 = DebugDLL|NX64
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|ORBIS.ActiveCfg = DebugDLL|ORBIS
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|ORBIS.Build.0 = DebugDLL|ORBIS
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|Win32.ActiveCfg = DebugDLL|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|Win32.Build.0 = DebugDLL|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|x64.ActiveCfg = DebugDLL|x64
@@ -43,6 +51,8 @@ Global
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|Durango.ActiveCfg = Release|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|NX64.ActiveCfg = Release|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|NX64.Build.0 = Release|NX64
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|ORBIS.ActiveCfg = Release|ORBIS
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|ORBIS.Build.0 = Release|ORBIS
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|Win32.ActiveCfg = Release|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|Win32.Build.0 = Release|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|x64.ActiveCfg = Release|x64
@@ -50,6 +60,8 @@ Global
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|Durango.ActiveCfg = ReleaseDLL|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|NX64.ActiveCfg = ReleaseDLL|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|NX64.Build.0 = ReleaseDLL|NX64
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|ORBIS.ActiveCfg = ReleaseDLL|ORBIS
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|ORBIS.Build.0 = ReleaseDLL|ORBIS
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|Win32.ActiveCfg = ReleaseDLL|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|Win32.Build.0 = ReleaseDLL|Win32
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|x64.ActiveCfg = ReleaseDLL|x64
