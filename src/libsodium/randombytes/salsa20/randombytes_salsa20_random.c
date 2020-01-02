@@ -57,6 +57,10 @@ BOOLEAN NTAPI RtlGenRandom(PVOID RandomBuffer, ULONG RandomBufferLength);
 # endif
 #endif
 
+#ifdef __ORBIS__
+#include <kernel.h>
+#endif
+
 #define SALSA20_RANDOM_BLOCK_SIZE crypto_core_salsa20_OUTPUTBYTES
 
 #if defined(__OpenBSD__) || defined(__CloudABI__)

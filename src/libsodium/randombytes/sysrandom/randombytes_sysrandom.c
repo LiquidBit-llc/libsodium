@@ -24,6 +24,10 @@
 # include <poll.h>
 #endif
 
+#ifdef __ORBIS__
+#include <kernel.h>
+#endif
+
 #include "core.h"
 #include "private/common.h"
 #include "randombytes.h"
