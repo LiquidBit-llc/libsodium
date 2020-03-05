@@ -86,8 +86,6 @@
     <ProjectGuid>{A185B162-6CB6-4502-B03F-B56F7699A8D9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>libsodium</RootNamespace>
-    <XdkEditionTarget>180712</XdkEditionTarget>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
