@@ -1,18 +1,18 @@
 #ifndef crypto_onetimeauth_poly1305_H
 #define crypto_onetimeauth_poly1305_H
 
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <sys/types.h>
+
 #ifdef __cplusplus
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
 extern "C" {
 #endif
-
-#include <stdint.h>
-#include <stdio.h>
-#include <stdlib.h>
-
-#include <sys/types.h>
 
 #include "export.h"
 
