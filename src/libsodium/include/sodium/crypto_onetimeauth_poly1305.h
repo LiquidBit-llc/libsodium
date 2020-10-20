@@ -5,14 +5,15 @@
 # ifdef __GNUC__
 #  pragma GCC diagnostic ignored "-Wlong-long"
 # endif
+
+#include <sys/types.h>
+
 extern "C" {
 #endif
 
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-
-#include <sys/types.h>
 
 #include "export.h"
 
