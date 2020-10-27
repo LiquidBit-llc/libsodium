@@ -1,3 +1,4 @@
+#ifndef NO_RANDOMBYTES_IMPL
 
 #ifndef randombytes_salsa20_random_H
 #define randombytes_salsa20_random_H
@@ -15,5 +16,8 @@ extern struct randombytes_implementation randombytes_salsa20_implementation;
 #ifdef __cplusplus
 }
 #endif
+
+#endif
+
 
 #endif

@@ -1,3 +1,4 @@
+#ifndef NO_RANDOMBYTES_IMPL
 
 #include <assert.h>
 #include <errno.h>
@@ -567,3 +568,5 @@ struct randombytes_implementation randombytes_salsa20_implementation = {
     SODIUM_C99(.buf =) randombytes_salsa20_random_buf,
     SODIUM_C99(.close =) randombytes_salsa20_random_close
 };
+
+#endif

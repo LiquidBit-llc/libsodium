@@ -1,3 +1,4 @@
+#ifndef NO_RANDOMBYTES_IMPL
 
 #include <assert.h>
 #include <errno.h>
@@ -63,6 +64,8 @@
  * based on Chromium) also depend on it, and that libsodium allows the RNG to be
  * replaced without patching nor recompiling the library.
  */
+# include <Windows.h>
+#else
 # include <windows.h>
 # define RtlGenRandom SystemFunction036
 # if defined(__cplusplus)
@@ -391,3 +394,5 @@ struct randombytes_implementation randombytes_sysrandom_implementation = {
     SODIUM_C99(.buf =) randombytes_sysrandom_buf,
     SODIUM_C99(.close =) randombytes_sysrandom_close
 };
+
+#endif

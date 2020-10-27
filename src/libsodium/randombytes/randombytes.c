@@ -44,10 +44,12 @@ static const randombytes_implementation *implementation;
 static void
 randombytes_init_if_needed(void)
 {
+#ifndef NO_RANDOMBYTES_IMPL
     if (implementation == NULL) {
         implementation = RANDOMBYTES_DEFAULT_IMPLEMENTATION;
         randombytes_stir();
     }
+#endif
 }
 
 int
