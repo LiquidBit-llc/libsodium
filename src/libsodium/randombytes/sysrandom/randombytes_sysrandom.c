@@ -64,8 +64,6 @@
  * based on Chromium) also depend on it, and that libsodium allows the RNG to be
  * replaced without patching nor recompiling the library.
  */
-# include <Windows.h>
-#else
 # include <windows.h>
 # define RtlGenRandom SystemFunction036
 # if defined(__cplusplus)
