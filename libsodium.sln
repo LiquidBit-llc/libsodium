@@ -7,18 +7,22 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|durango = Debug|durango
+		Debug|GGP = Debug|GGP
 		Debug|NX64 = Debug|NX64
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
 		DebugDLL|durango = DebugDLL|durango
+		DebugDLL|GGP = DebugDLL|GGP
 		DebugDLL|NX64 = DebugDLL|NX64
 		DebugDLL|Win32 = DebugDLL|Win32
 		DebugDLL|x64 = DebugDLL|x64
 		Release|durango = Release|durango
+		Release|GGP = Release|GGP
 		Release|NX64 = Release|NX64
 		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
 		ReleaseDLL|durango = ReleaseDLL|durango
+		ReleaseDLL|GGP = ReleaseDLL|GGP
 		ReleaseDLL|NX64 = ReleaseDLL|NX64
 		ReleaseDLL|Win32 = ReleaseDLL|Win32
 		ReleaseDLL|x64 = ReleaseDLL|x64
@@ -26,6 +30,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|durango.ActiveCfg = Debug|durango
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|durango.Build.0 = Debug|durango
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|GGP.ActiveCfg = Debug|GGP
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|GGP.Build.0 = Debug|GGP
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|NX64.ActiveCfg = Debug|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|NX64.Build.0 = Debug|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|Win32.ActiveCfg = Debug|Win32
@@ -34,6 +40,8 @@ Global
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Debug|x64.Build.0 = Debug|x64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|durango.ActiveCfg = DebugDLL|durango
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|durango.Build.0 = DebugDLL|durango
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|GGP.ActiveCfg = DebugDLL|GGP
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|GGP.Build.0 = DebugDLL|GGP
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|NX64.ActiveCfg = DebugDLL|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|NX64.Build.0 = DebugDLL|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|Win32.ActiveCfg = DebugDLL|Win32
@@ -42,6 +50,8 @@ Global
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.DebugDLL|x64.Build.0 = DebugDLL|x64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|durango.ActiveCfg = Release|durango
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|durango.Build.0 = Release|durango
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|GGP.ActiveCfg = Release|GGP
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|GGP.Build.0 = Release|GGP
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|NX64.ActiveCfg = Release|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|NX64.Build.0 = Release|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|Win32.ActiveCfg = Release|Win32
@@ -50,6 +60,8 @@ Global
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.Release|x64.Build.0 = Release|x64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|durango.ActiveCfg = ReleaseDLL|durango
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|durango.Build.0 = ReleaseDLL|durango
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|GGP.ActiveCfg = ReleaseDLL|GGP
+		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|GGP.Build.0 = ReleaseDLL|GGP
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|NX64.ActiveCfg = ReleaseDLL|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|NX64.Build.0 = ReleaseDLL|NX64
 		{A185B162-6CB6-4502-B03F-B56F7699A8D9}.ReleaseDLL|Win32.ActiveCfg = ReleaseDLL|Win32

@@ -5,6 +5,10 @@
       <Configuration>DebugDLL</Configuration>
       <Platform>durango</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|GGP">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>GGP</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="DebugDLL|NX64">
       <Configuration>DebugDLL</Configuration>
       <Platform>NX64</Platform>
@@ -20,6 +24,10 @@
     <ProjectConfiguration Include="Debug|durango">
       <Configuration>Debug</Configuration>
       <Platform>durango</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|GGP">
+      <Configuration>Debug</Configuration>
+      <Platform>GGP</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|NX64">
       <Configuration>Debug</Configuration>
@@ -37,6 +45,10 @@
       <Configuration>ReleaseDLL</Configuration>
       <Platform>durango</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|GGP">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>GGP</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="ReleaseDLL|NX64">
       <Configuration>ReleaseDLL</Configuration>
       <Platform>NX64</Platform>
@@ -52,6 +64,10 @@
     <ProjectConfiguration Include="Release|durango">
       <Configuration>Release</Configuration>
       <Platform>durango</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|GGP">
+      <Configuration>Release</Configuration>
+      <Platform>GGP</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|NX64">
       <Configuration>Release</Configuration>
@@ -187,6 +203,25 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|GGP'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|GGP'">
+    <PlatformToolset>Ggp_Clang</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='DebugDLL|GGP'">
+    <PlatformToolset>Ggp_Clang</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|GGP'">
+    <PlatformToolset>Ggp_Clang</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|GGP'">
+    <PlatformToolset>Ggp_Clang</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -362,6 +397,9 @@
     <OutDir>$(SolutionDir)Build\$(Configuration)\$(Platform)\</OutDir>
     <IntDir>$(SolutionDir)Build\$(Configuration)\$(Platform)\Intermediate\</IntDir>
     <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|GGP'">
+    <TargetName>sodium</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -739,6 +777,36 @@
     <PostBuildEvent>
       <Message />
     </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|GGP'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SODIUM_DLL_EXPORT;NDEBUG;_CONSOLE;_GNU_SOURCE;VK_USE_PLATFORM_GGP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)src\libsodium\include\sodium;$(SolutionDir)src\libsodium\include\sodium;$(SolutionDir)src\libsodium\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|GGP'">
+    <ClCompile>
+      <DebugInformationFormat>FullDebugLldbSpecific</DebugInformationFormat>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\libsodium\crypto_generichash\crypto_generichash.c">
